@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#f7f6f2">
+<title>Vanessa & Vincent — 02/11/2026</title>
+<meta name="description" content="Los recuerdos de nuestra boda. Vanessa & Vincent, 02/11/2026.">
+<link rel="stylesheet" href="style.css"><script src="photos.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<audio id="wedding-music" src="music.mp3" loop preload="none"></audio>
+<button id="music-toggle" class="music-toggle" aria-label="Reproducir música a volumen bajo" aria-pressed="false">♫ <span>Música</span></button>
+<header class="cover">
+  <img class="cover-photo" src="cover.png" alt="Vanessa y Vincent abrazados el día de su boda" fetchpriority="high">
+  <div class="cover-shade"></div>
+  <div class="cover-copy"><p class="eyebrow">NUESTRA BODA</p><h1>VANESSA <span>&</span> VINCENT</h1><p class="date">02 / 11 / 2026</p><a class="enter" href="#album">VER NUESTRAS FOTOS <span aria-hidden="true">↓</span></a></div>
+  <span class="cover-monogram" aria-hidden="true">V & V</span>
+</header>
+<main id="album">
+  <nav class="album-nav" aria-label="Álbum"><a class="brand" href="#">V <i>&</i> V</a><a href="#gallery">FOTOGRAFÍAS</a><a class="download-all" href="https://github.com/alfonso22arteaga-create/vanessa-vincent-boda/releases/download/album/VANESSA-VINCENT.zip" download="VANESSA-VINCENT.zip">↓ <span>Descargar todo</span></a></nav>
+  <section class="album-intro"><p class="eyebrow">UN DÍA PARA SIEMPRE</p><h2>Cada imagen, un recuerdo.</h2><p>Volver a este día. Una y otra vez.</p><div class="album-meta"><span id="count"></span><span>02 NOVIEMBRE 2026</span></div></section>
+  <section class="wedding-film" aria-labelledby="film-title"><p class="eyebrow">VOLVER A VIVIRLO</p><h2 id="film-title">Nuestra película</h2><video id="wedding-film" controls playsinline preload="none" poster="cover.png"><source src="boda.mp4" type="video/mp4">Tu navegador no puede reproducir este video. Usa el enlace de descarga.</video><a class="download-all" href="boda.mp4" download="VANESSA-VINCENT-BODA.mp4">↓ Descargar video</a></section>
+  <div id="gallery" class="gallery" aria-label="Fotografías de la boda"></div>
+  <footer><p class="footer-names">Vanessa & Vincent</p><p>02 / 11 / 2026</p><a class="download-all" href="https://github.com/alfonso22arteaga-create/vanessa-vincent-boda/releases/download/album/VANESSA-VINCENT.zip" download="VANESSA-VINCENT.zip">↓ Descargar álbum completo</a><p class="hint">Archivos originales · ZIP de 248 MB</p></footer>
+</main>
+<dialog id="viewer" aria-label="Vista ampliada de fotografías"><div class="viewer-toolbar"><span id="position" aria-live="polite"></span><div><a id="download-one" download>↓ Descargar foto</a><button id="close" aria-label="Cerrar fotografía">✕</button></div></div><button id="previous" class="arrow previous" aria-label="Foto anterior">‹</button><img id="full-photo" alt=""><button id="next" class="arrow next" aria-label="Foto siguiente">›</button><p id="photo-name"></p></dialog>
+<noscript>Activa JavaScript para ver la galería. Puedes <a href="https://github.com/alfonso22arteaga-create/vanessa-vincent-boda/releases/download/album/VANESSA-VINCENT.zip" download>descargar todas las fotografías aquí</a>.</noscript>
+</body></html>
