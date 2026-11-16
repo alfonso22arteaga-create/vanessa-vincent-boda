@@ -2,7 +2,7 @@ name: Publicar galeria
 on:
   push:
     branches: [main]
-    paths: ['index.html', 'style.css', 'app.js', 'photos.js', 'cover.png', '*.zip']
+    paths: ['index.html', 'style.css', 'app.js', 'photos.js', 'cover.png', 'music.mp3', '*.zip']
   workflow_dispatch:
 permissions:
   contents: read
@@ -22,9 +22,14 @@ jobs:
       - name: Preparar galeria
         run: |
           mkdir -p dist
-          cp index.html style.css app.js photos.js cover.png dist/
+          cp index.html style.css app.js photos.js cover.png music.mp3 dist/
           touch dist/.nojekyll
-          for archive in photos-*.zip thumbs.zip; do unzip -q "$archive" -d dist; done
+          curl --fail --location --retry 3 https://github.com/alfonso22arteaga-create/vanessa-vincent-boda/releases/download/album/VANESSA-VINCENT.zip -o /tmp/album.zip
+          echo '78c97e549909a0dd9649f6006b5a5b443d1df722ba47105d5badf2c53964bed5  /tmp/album.zip' | sha256sum -c -
+          unzip -q /tmp/album.zip -d /tmp/album
+          mv '/tmp/album/VINCENT - copia' dist/photos
+          unzip -q thumbs.zip -d dist
+          curl --fail --location --retry 3 https://github.com/alfonso22arteaga-create/vanessa-vincent-boda/releases/download/album/boda.mp4 -o dist/boda.mp4
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
